@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Imports\ProductsImport;
 use App\Models\Product;
 use App\Notifications\ProductDelivery;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ProductController extends Controller
 {
@@ -36,7 +38,7 @@ class ProductController extends Controller
         ]);
     }
 
-
+    //上傳圖片
     public function uploadImage(Request $request){
         $file = $request->file('product_image');
         $productId = $request->input('product_id');
@@ -53,5 +55,12 @@ class ProductController extends Controller
         ]);
         return redirect()->back();
 
+    }
+
+    //import Excel 
+    public function import (Request $request){
+        $file = $request->file('excel');
+        Excel::import(new ProductsImport, $file);
+        return redirect()->back();
     }
 }

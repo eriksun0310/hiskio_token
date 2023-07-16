@@ -4,6 +4,15 @@
 
 <h2>產品列表</h2>
 <span>產品總數: {{ $productCount }}</span>
+<div>
+    {{-- <input type="button" class="import" value="匯入 Excel"> --}}
+    <input 
+        type="button" 
+        class="import" 
+        value="匯入 Excel" 
+        data-bs-toggle="modal" 
+        data-bs-target="#import">
+</div>
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -61,9 +70,11 @@
 </div>
 <script>
     $('.upload_image').click(function(){
-        console.log(22222)
         $('#product_id').val($(this).data('id'))
         $('#upload_image').modal()
+    })
+    $('.import').click(function(){
+        $('#import').modal()
     })
 
 </script>

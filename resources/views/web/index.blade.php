@@ -19,7 +19,12 @@
     <tbody>
         @foreach ($products as $product)
         <tr>
-            <td>{{$product->title}}</td>
+            @if ( $product->id == 1)
+                <td class="special-text">{{$product->title}}</td>
+            @else
+                <td>{{$product->title}}</td>
+            @endif
+            
             <td>{{$product->content}}</td>
             <td>{{$product->price}}</td>
             <td>

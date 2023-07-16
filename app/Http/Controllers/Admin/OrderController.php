@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Exports\OrdersExport;
+use App\Exports\OrdersMultipleExport;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Order;
 use App\Notifications\OrderDelivery;
+use Maatwebsite\Excel\Facades\Excel;
 
 class OrderController extends Controller
 {
@@ -49,5 +52,14 @@ class OrderController extends Controller
             $order->user->notify(new OrderDelivery);
             return response(['result' => true]);
         }
+    }
+
+    //匯出 excel
+    public function export(){
+        return Excel::download(new OrdersExport, 'orders.xlsx');
+    }
+    //匯出 多活頁excel
+    public function exportByShipped(){
+        return Excel::download(new OrdersMultipleExport, 'orders_by_shipped.xlsx');
     }
 }

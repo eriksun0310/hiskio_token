@@ -3,6 +3,10 @@
 
 <h2>訂單列表</h2>
 <span>訂單總額: {{ $orderCount }}</span>
+<div>
+    <a href="/admin/orders/excel/export">匯出訂單(excel)</a>
+    <a href="/admin/orders/excel/export-by-shipped">匯出分類訂單(excel)</a>  
+</div>
 <table>
     <thead> 
         <tr>

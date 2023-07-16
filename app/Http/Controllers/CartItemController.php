@@ -89,9 +89,6 @@ class CartItemController extends Controller
      */
     public function update(UpdateCartItem $request, string $id)
     {
-
-
-
         $form = $request->validated();
 
         $cartItem = CartItem::find($id);

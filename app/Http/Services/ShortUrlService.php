@@ -4,13 +4,17 @@ namespace App\Http\Services;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Log;
 
-class ShortUrlService{
+class ShortUrlService implements  ShortUrlInterfaceService{ 
     
     protected $client;
+    // private $version = 4.5; //僅在內部使用
+    // protected $version = 4.5; //僅在繼承該類(ShortUrlService)使用
+    public $version = 4.5;
 
     public function __construct()   
     {   
         $this->client = new Client();
+        // dump($this->version);
     }
     //串接皮克看見api 製作縮網址
     public function makeShortUrl($url){

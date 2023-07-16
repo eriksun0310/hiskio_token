@@ -15,12 +15,12 @@ class ProductSeeder extends Seeder
     {
         //upsert([array], [主鍵],[update]):會根據主鍵(id)去搜尋資料,若無(id)就建立資料,若有(id)就去更新 price、quantity
         Product::upsert([
-            ['id' => 17 ,
+            ['id' => 1,
             'title' => '固定資料',
             'content' => '固定內容',
             'price' => rand(0,100), 
             'quantity' => 7],
-            ['id' => 18 ,
+            ['id' => 2,
             'title' => '固定資料2',
             'content' => '固定內容2',
             'price' => rand(0,100), 

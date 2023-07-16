@@ -28,6 +28,7 @@ class Handler extends ExceptionHandler
     {
         //
         $this->reportable(function (Throwable $e) {
+            dd($e);
             $user = auth()->user() ;//取得目前的user
             LogError::create([
                 'user_Id' => $user ? $user->id : 0,
@@ -45,9 +46,9 @@ class Handler extends ExceptionHandler
                 'header' =>request()->headers->all(),
             ]);
         });
-        $this->renderable(function(Throwable $e){
-            return response()->view('error');
-        });
+        // $this->renderable(function(Throwable $e){
+        //     return response()->view('error');
+        // });
     }
 
     //如果token失效的話,返回的訊息 

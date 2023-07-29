@@ -1,8 +1,12 @@
 @extends('layouts.app')
 
 @section('contect')
-<h3>聯絡我們</h3>
-<form action="">
+<link rel="stylesheet" href="/css/try.css">
+<h1 class="m-2">
+    聯絡我們
+    <i class="fa-solid fa-phone-volume"></i>
+</h1>
+<form action="" class="w-50 m-2">
     <div class="form-group">
         <label for="exampleInputePassword1">請問你是：</label>
         <input name="name" type="text" class="form-control" id="exampleInputePassword1">

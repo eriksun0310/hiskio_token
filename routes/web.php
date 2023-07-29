@@ -37,6 +37,8 @@ Route::post('/products/check_product', 'ProductController@checkProduct');
 Route::get('/products/{id}/shared-url', 'ProductController@sharedUrl');
 Route::resource('products', 'ProductController');
 
+
+Route::get('/admin/orders/datatable', 'Admin\OrderController@datatable');
 Route::resource('admin/orders', 'Admin\OrderController');
 Route::resource('admin/products'   , 'Admin\ProductController');
 Route::post('admin/products/upload-image', 'Admin\ProductController@uploadImage');
@@ -61,3 +63,10 @@ Route::group([
     Route::resource('carts', 'CartController'); 
     Route::resource('cart_items', 'CartItemController');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

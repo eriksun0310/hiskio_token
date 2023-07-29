@@ -1,7 +1,28 @@
-h2{
-    color: cadetblue;
+h1{
+    color: rgb(92, 151, 219);
 }
 .special-text {
-    background-color: rgb(97, 151, 180);
-    color: aliceblue;
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(92, 93, 95) !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    text-align: center;
+}
+.text{
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(92, 93, 95) !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    text-align: center;
+}
+.title{
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(112, 147, 186) !important;
+    font-size: 25px !important;
+    font-weight: bold !important;
+    text-align: center;
+}
+.action{
+    display: flex;
+    justify-content: center;
 }

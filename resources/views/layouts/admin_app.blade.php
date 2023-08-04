@@ -13,12 +13,13 @@
         {{-- <script src="{{ mix('js/app.js')}}"></script> --}}
         {{-- <link rel="stylesheet" href="{{ mix('css/app.css', 'app') }}"> --}}
         {{-- <link rel="stylesheet" href="{{  asset('dist/css/app.css')  }}"> --}}
-        <script src="{{ asset('js/app.js') }}" defer></script>
+        <link rel="stylesheet" href="{{ asset('build/assets/app-5bcef938.css') }}">
+        <script src="{{ asset('build/assets/app-d3d738fd.js') }}" defer></script>
     </head>
     <body>
         @include('layouts.admin_nav')
         <div>
-            @yield('contect')
+            @yield('content')
         </div>
     </body>
     @stack('scripts')

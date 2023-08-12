@@ -21,6 +21,7 @@ class WebController extends Controller
 
     //首頁
     public function index(){
+        \Log::alert(123);
         $products =  Product::all();
         return view('web.index', [
             'products' => $products,

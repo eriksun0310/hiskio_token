@@ -12,7 +12,9 @@ use App\Http\Services\AuthService;
 class ProductController extends Controller
 {
 
-    // public $shortUrlService = '';
+    // 依賴注入
+    public $shortUrlService = '';
+    public $authService = '';
 
     public function __construct(ShortUrlService $shortUrlService , AuthService $authService)
     {

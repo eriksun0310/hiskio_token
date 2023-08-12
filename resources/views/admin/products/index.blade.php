@@ -1,6 +1,6 @@
 @extends('layouts.admin_app')
 
-@section('contect')
+@section('content')
 
 <h2>產品列表</h2>
 <span>產品總數: {{ $productCount }}</span>

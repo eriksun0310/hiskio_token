@@ -1,8 +1,9 @@
 
 @extends('layouts.app')
 
-@section('contect')
-    
+@section('content')
+
+
 <link rel="stylesheet" href="/css/try.css">
 
 

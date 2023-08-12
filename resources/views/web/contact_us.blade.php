@@ -1,6 +1,6 @@
 @extends('layouts.app')
+@section('content')
 
-@section('contect')
 <link rel="stylesheet" href="/css/try.css">
 <h1 class="m-2">
     聯絡我們
